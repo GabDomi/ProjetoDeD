@@ -15,7 +15,6 @@ class DistribuicaoManualStrategy : DistribuicaoPontosStrategy {
         15 to 9
     )
 
-    // Função para calcular o modificador com base no valor do atributo
     private fun calcularModificador(valor: Int): Int {
         return (valor - 10) / 2
     }
@@ -57,7 +56,6 @@ class DistribuicaoManualStrategy : DistribuicaoPontosStrategy {
             }
         }
 
-        // Aplicando os valores finais e calculando modificadores
         personagem.forca = atributos["Força"]!!
         personagem.destreza = atributos["Destreza"]!!
         personagem.constituicao = atributos["Constituição"]!!
@@ -65,7 +63,6 @@ class DistribuicaoManualStrategy : DistribuicaoPontosStrategy {
         personagem.sabedoria = atributos["Sabedoria"]!!
         personagem.carisma = atributos["Carisma"]!!
 
-        // Aplicando modificadores
         val modificadores = mapOf(
             "Força" to calcularModificador(personagem.forca),
             "Destreza" to calcularModificador(personagem.destreza),
